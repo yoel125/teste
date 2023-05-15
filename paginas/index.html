@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="cafeteria pinheiros"/>
+    <meta name="description" content="papelaria"/>
     <!-- descriçao do seu site-->
-    <meta name="keywords" content="cafe, salgados, sucos , coworking..."/>
+    <meta name="keywords" content="papelaria, cadernos, mochilas..."/>
     <!--palavras chave para as pesquisas-->
-    <title> o melhor cafe de sao paulo</title>
+    <title> papelaria</title>
 
     <style>
-
-
-    .wrapper{
+        .wrapper{
         margin: auto; /* centralizar a caixa*/
         display: flex; /* minha caixa principal que recbera*/
         flex-direction:row; /*exibira em caixas*/
@@ -25,7 +23,7 @@
 
         width: 100%; /*largura ca caixa em porcentagem*/
         height: auto;/* se ajusta ao conteudo dentro*/
-        background-color: rgb(9, 9, 9);
+        background-color: rgb(183, 59, 59);
         padding: 0px;
     }
     .boxlogo{
@@ -42,61 +40,55 @@
 .boxmenu{
     width: 95%;
     height:100px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(78, 103, 216);
     
-
 }
-
-
-.boxbannerlateral{/*caixa lateral*/
-    width: 50%;
-    height: 500px;
-    background-color: darkblue;
-    padding: 0%;
-}
-.boxtamanhobannerlateral{/*classe tamanho da imagem*/
-    width: 100%;
-    height: 500px;
-}
-.boxtexto{
-    width: 40%;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    padding-left: 5%;
-    padding-top: 5%;
-}
-
 .boxh1{ /*box que recebara o texto do mais pedidos*/
     width: 100%;
     height: 80px;
-    background-color: brown;
-    text-align: center;
+    background-color: rgb(78, 103, 216);
+    text-align:center;
 }
-
+.boxbanner{
+    width: 200%;
+    height: 460px;
+}
+.boxtamanhobanner{
+    width: 100%;
+    height: 460px;
+}
 .boxmaispedidos{
-    width: 30%;
-    height: 309px;
-    background-color: rgb(101, 101, 204);
-    text-align: center;
-    font-family: "century Gothic", Georgia, 'Times New Roman', Times, serif;
-    margin: 5px;
+    width: 100%;
+    height: 290px;
+    text-align: left;
+    background-color: blue;
 
 }
 .boxtamanhomaispedidos{
     width: 100%;
-    height: auto;
+    height: 290px;
 }
-
-.boxinformacoes{
-    width: 5%;
-    height: 50px;
-    background-color: rgb(255, 255, 255);
-
+.boxmaterial{
+    width: 100%;
+    height: 290px;
+    background-color: rgb(0, 0, 0);
 
 }
-
-    
-    .boxrodape{
+.boxtamanhomaterial{
+    width: 100%;
+    height: 290px;
+}
+.boxpromoção{
+    width: 100%;
+    height: 250px;
+background-color: rgb(190, 156, 22);
+   
+}
+.boxtamanhopromoção{
+    width: 100%;
+    height: 250px;
+}
+.boxrodape{
         width: 100%;
         height: 20px;
         background-color: rgb(255, 255, 255);
@@ -105,8 +97,7 @@
        
     }
 
-
-    nav{
+nav{
     font-family: 'Century Gothic', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	width: 100%; /*MINHA AREA NAVEGAVEL PEGA TODO ESPAÇO DA TELA*/
 	height: 50px; /*ALTURA*/
@@ -126,7 +117,7 @@ nav ul li{ /*Deixando os li um do lado do outro*/
 }
 
 nav ul li a{
-	color: orange; /*cor do texto do link*/
+	color: rgb(255, 255, 255); /*cor do texto do link*/
 	text-decoration: none; /*none desativa a decoração do link */
 	padding: 15px;
 	display: block; /*transformar em blocos e movimentar pra onde eu quiser*/
@@ -140,104 +131,47 @@ nav ul li a:hover{   /*evento mouse em cima do link*/
     font-weight: bolder; /*deixar o texto mais forte (negrito)*/
 }
 
-/*inicio banner animado*/
-
-
-.boxbanner{
-    width: 100%;
-    height: 600px;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-}
-
-.boxbanner img{ /*alterando minha imagem que esta dentro da caixa banner*/ 
-           width: 100%;
-           position: absolute;/*posiçao absoluta dentro do box banner*/
-           transition-property:opacity; /*tranparencia*/
-           transition-duration: 1s;/*tempo de duracao pra carregar img*/
-           transition-timing-function: linear;/*transicao linear*/
-}
-/*aqui eu chamo as imgs pelo id delas colocadas no html*/
-.boxbanner #anime1, .boxbanner:hover #anime2{
-    /*ao passar o mouse carregara a segunda img*/
-    opacity: 1;
-    /*a pimeira comecara 100% visivel*/
-}
-
-.boxbanner:hover #anime1, .boxbanner #anime2{
-    opacity: 0;/*0% invisivel a 1 para a segunda aparecer*/
-}
-</style>
+    </style>
 
 </head>
 
-
 <body>
-<div class="wrapper">
-    <div class="boxlogo">
-        <img src="../imagens/logo do cafe.png" class="tamanhologo" title=" cafeteria">
+    <div class="wrapper">
+        <div class="boxlogo">
+        <img src="../imagens/logo.png" class="tamanhologo">
+        </div>
+    
+            <div class="boxmenu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="escolar.html">escolar</a></li>
+                        <li><a href="informatica.html">informatica</a></li>
+                        <li><a href="fale conosco.html">fale conosco</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="boxbanner">
+               <img src="../imagens/Prancheta 1.png" class="boxtamanhobanner">
+            </div>
+    <div class="boxh1">
+        <h1> Mais pedidos</h1>
     </div>
-
-        <div class="boxmenu">
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="cafeteria.html">cafeteria</a></li>
-                    <li><a href="menu.html">menu</a></li>
-                    <li><a href="contato.html">contato</a></li>
-                    </li>
-                </ul>
-            </nav>
+        
+         <div class="boxmaispedidos">
+       <img src="../imagens/mais  pedidos.png" class="boxtamanhomaispedidos">
         </div>
 
+         <div class="boxmaterial">
+         <img src="../imagens/banner 2.png" class="boxtamanhomaterial">
+        </div>
 
-<div class="boxbanner">
-    <img id="anime1" src="../imagens/Prancheta 1.png">
-    <img id="anime2" src="../imagens/Prancheta 2.png">
-    <!--
-        estou chamando duas imagens ao mesmo tempo,
-        mas criei um id para chamar uma animacao no css
-    -->
-</div>
-          
-             <div class="boxbannerlateral">
-            <img src="../imagens/Prancheta 2.png" class="boxtamanhobannerlateral">
-            </div>
+         <div class="boxpromoção">
+        <img src="../imagens/promocao.png"     class="boxtamanhopromoção">
+        </div>
 
-             <div class="boxtexto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus
-            </div>
-
-             <div class="boxh1">
-            <h1> Mais pedidos</h1>
-            </div>
-            
-             <div class="boxmaispedidos">
-            <img src="../imagens/cafe-cafeina-1654432191571_v2_900x506.jpg" class="boxtamanhomaispedidos">
-            </div>
-
-             <div class="boxmaispedidos">
-            <img src="../imagens/pexels-photo-376464.jpeg" class="boxtamanhomaispedidos">
-            </div>
-
-             <div class="boxmaispedidos">
-            <img src="../imagens/pexels-photo-1291712.jpeg"  class="boxtamanhomaispedidos">
-            </div>
-
-<!--chamei a caixa das informacoes acima de rodape-->
-
-<div class="boxinformacoes">
-            
- 
-            <div class="boxinformacoes">
-                <img src="../imagens/informacoes1.png">
-
-            </div>
-            
- </div>
-      
     
-<div class="boxrodape"> todos os direitos reservados</div>
-
-</body>
-</html>
+        <div class="boxrodape"> todos os direitos reservados</div>
+        </body>
+        </html>
