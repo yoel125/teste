@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato</title>
+
+<link rel="stylesheet" type="text/css" href="../css/stylecontato.css"/>
+
+<style>
+    .wrapper{
+        margin: auto; /* centralizar a caixa*/
+        display: flex; /* minha caixa principal que recbera*/
+        flex-direction:row; /*exibira em caixas*/
+        flex-wrap: wrap; /*as caixas estarao em linhas*/
+
+       /* justify-content:center;/*para ficarem uma ao lado da outra e quebrar linha*/
+        /*align-items:center; /*alinhamento o objeto na vertical*/
+
+        width: 100%; /*largura ca caixa em porcentagem*/
+        height: auto;/* se ajusta ao conteudo dentro*/
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+    }
+    .boxlogo{
+        width: 5%;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        margin: 0px;
+    }
+.tamanhologo{
+    width: 100%;
+    height: auto;
+}
+
+.boxmenu{
+    width: 95%;
+    height:100px;
+    background-color: rgb(255, 255, 255);
+    
+
+}
+nav{
+    font-family: 'Century Gothic', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	width: 100%; /*MINHA AREA NAVEGAVEL PEGA TODO ESPAÇO DA TELA*/
+	height: 50px; /*ALTURA*/
+	}
+
+
+nav ul{ /*estou formatando meu UL que está dentro do NAV*/
+	list-style: none;/*Retira a linha abaixo do link*/
+	margin: 0;
+	padding: 0;
+    text-align: center; /*alinhamento no centro*/
+ }
+
+
+nav ul li{ /*Deixando os li um do lado do outro*/
+	display: inline-block;	/*para ficar um do lado do outro*/
+}
+
+nav ul li a{
+	color: orange; /*cor do texto do link*/
+	text-decoration: none; /*none desativa a decoração do link */
+	padding: 15px;
+	display: block; /*transformar em blocos e movimentar pra onde eu quiser*/
+}
+
+nav ul li a:hover{   /*evento mouse em cima do link*/
+	background-color: orange;
+	transition: all .5s;   /*efeito de transição*/
+    border-radius: 10px;  /*ARREDONDANDO AS BORDAS*/
+    color:#543022; /*cor da fonte quando passar o mouse*/
+    font-weight: bolder; /*deixar o texto mais forte (negrito)*/
+}
+
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <div class="boxlogo">
+            <img src="../imagens/logo do cafe.png" class="tamanhologo" title=" cafeteria">
+        </div>
+    
+            <div class="boxmenu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="cafeteria.html">cafeteria</a></li>
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="contato.html">contato</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    
+    <div class="conteudo_formulario">
+        <form method="post" id="fcontato" action="cafeteria@gmail.com">
+            <!--metodo post para guardar as informacoes
+            id (identificacao) para chamar no css e formatar
+        action para qual email irao os dados
+    temos o method get para pesquisas. ele nao guarda o conteudo-->
+    <fieldset id="usuario"> <!--conjunto de campos em bloco-->
+
+        <legend> identificação do usuario </legend>
+    <!--teremos uma legenda acima do bloco para identificacao-->
+
+
+
+    <p>
+        <label for="cNome">nome: </label> <!--rotulo que vira antes da caixa de preenchimento-->
+        <input type="text" name="tnome" id="cNome" size="20" maxlength="20"
+        placeholder="digite seu nome aqui" autofocus required/>
+
+        <!--input é a caixa para usuario prencher do tipo de texto
+        a caixa possui um nome que ira receber o conteudo digitado e um id para o css
+        maxlength é a quantidade de caracteres que o usuario poe digitar dentro de uma caixa 
+        placeholder - textp informativo dentro da caixa
+    autofocus - o cursor ficara dentro da caixa e o campo sera obrigatorio-->
+    </p>
+
+    <p>
+        <label for="cSenha">senha:</label>
+        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8"
+        placeholder="8 digitos"required/>
+        <!--required é campo obrigatorio 
+        meu input sera password pq sera senha -->
+    </p>
+
+
+
+    <p>
+        <label for="cMail">e-mail</label>
+        <input type="email" name="tMail" id="cMail" size="30" maxlength="30"
+        placeholder="digite seu email" required/>
+    </p>
+    <!-- type email permite que vc digite o email-->
+
+<!--abri um bloco (fieldset)para colocar sexo do usuario-->
+    <fieldset id="sexo">
+        <legend>sexo:</legend>
+        <!--type radio para bolinhas de alternativas-->
+        <input type="radio" name="tSexo" id="cMasc"/>
+        <label for="cMasc"> masculino</label>
+        <input type="radio" name="tSexo" id="cFem"/>
+        <label for="cFem"> feminino</label>
+       
+    </fieldset>
+    <p>
+        data de nascimento: <input type="date" name="tNasc" id="cNasc"/>
+    </p>
+    <!-- obs: se nao aparecer o calendario no navegador... é pq o naveg nao é compativel com o type=date ... mesmo assim colocar-->
+
+    </fieldset> <!-- meu primeiro bloco fechado-->
+
+
+    <fieldset id="endereco"> <!--abri outro bloco para endereco-->
+
+        <legend>endereço do usuario</legend>
+
+        <P>
+            <label for="cRua">logradouro:</label>
+            <input type="text" name="trua" size="30" maxlength="50"
+            placeholder="rua,av,trav,.." required/>
+        </P>
+
+        <p>
+            <label for="cnum">número:</label>
+            <input type="number" name="tNum" id="cNum" min="0" max="99999"/>
+        </p>
+        <!--type number aparecera botao de escolha - zero sendo o minimo ate 99999-->
+
+    <fieldset>
+    <p>
+        <label for="cEst">estado</label>
+        <!--***select - criar caixas combinadas...
+        ***selected (este coloco dentro do tag option)- deixar o são paulo marcado
+    ***value o que vc colocar sera como o banco de dadps recebera. caso vc nao coloque ele recebera são paulo-->
+    <select name="tEst" id="cEst">
+        <optgroup label="regiao sudeste">
+            <option value="SP" selected> São paulo</option>
+            <option value="MG" selected> Minas gerais</option>
+            <option value="RJ" selected> Rio de janeiro</option>
+            <option value="ES" selected> Espirito</option>
+             </optgroup>
+             <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+             </optgroup>
+        
+    </select>
+     </p>
+
+     <p>
+        <label for="cCid">cidade</label>
+        <input type="text" name="tCid" id="cCid" size="40" maxlength="40"
+        placeholder="sua cidade"/>
+     </p>
+    </fieldset> <!--fechei meu bloco-->
+
+    <fieldset id="mensagem">
+        <legend>mensagem do usuario</legend>
+
+        <p>
+            <label for="cUrg">grau de urgencia:</label>
+            min <input type="range" class="bar" name="tUrg" id="cUrg" min="0" max="10"
+            step="2"/> max 
+        </p>
+
+        <p>
+            <label for="cMsg">mensagem</label>
+            <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="deixe aqui sua mensagem"></textarea>
+            <!--textarea é uma caixa que vc pode deixar com mais linhas e colunas para usuario digitar mais texto-->  <!--col=colunas row=linhas-->
+        </p>
+    </fieldset>
+
+
+    <input type="submit" name="enviar" />
+    <input type="reser" name="limpar"  />
+
+    </form>
+    </div>
+</body>
+</html>
